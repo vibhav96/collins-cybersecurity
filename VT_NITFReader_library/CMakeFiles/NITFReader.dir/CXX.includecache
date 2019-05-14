@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/vagrant/VT_NITFReader_library/NITFFile.cpp
+iostream
+-
+stdexcept
+-
+vector
+-
+NITFFile.h
+/vagrant/VT_NITFReader_library/NITFFile.h
+
+/vagrant/VT_NITFReader_library/NITFFile.h
+string
+-
+deque
+-
+import/nitf.h
+/vagrant/VT_NITFReader_library/import/nitf.h
+

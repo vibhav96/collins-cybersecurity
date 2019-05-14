@@ -1,0 +1,3 @@
+/vagrant/VT_NITFReader_library/./install/lib/libNITFReader.so
+/vagrant/VT_NITFReader_library/./install/bin/VT_NITFReader
+/vagrant/VT_NITFReader_library/./install/run/runNITFReader.sh

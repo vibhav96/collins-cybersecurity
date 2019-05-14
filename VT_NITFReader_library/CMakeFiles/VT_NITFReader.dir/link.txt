@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/VT_NITFReader.dir/VT_NITFReader.cpp.o  -o VT_NITFReader  -L/usr/local/lib/nitf  -L/usr/local/lib/nrt -rdynamic libNITFReader.so -lnitf-c -lnrt-c -Wl,-rpath,/usr/local/lib/nitf:/usr/local/lib/nrt:/vagrant/VT_NITFReader_library: 

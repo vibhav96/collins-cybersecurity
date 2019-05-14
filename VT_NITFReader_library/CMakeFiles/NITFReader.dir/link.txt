@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC    -shared -Wl,-soname,libNITFReader.so -o libNITFReader.so CMakeFiles/NITFReader.dir/NITFFile.cpp.o  -L/usr/local/lib/nitf  -L/usr/local/lib/nrt 

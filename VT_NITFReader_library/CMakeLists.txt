@@ -1,0 +1,40 @@
+cmake_minimum_required(VERSION 2.8)
+
+set(CMAKE_INSTALL_PREFIX ./install)
+set( CMAKE_VERBOSE_MAKEFILE on )
+
+SET(NITRO_PREFIX $ENV{NITRO_PREFIX})
+if("${NITRO_PREFIX}" STREQUAL "")
+  set(NITRO_PREFIX /usr/local)
+endif()
+
+INCLUDE_DIRECTORIES(
+	${NITRO_PREFIX}/include/nitf
+)
+
+LINK_DIRECTORIES(
+	${NITRO_PREFIX}/lib/nitf
+	${NITRO_PREFIX}/lib/nrt
+)
+
+SET(library_sources
+	NITFFile.cpp
+)
+
+SET(reader_sources
+	VT_NITFReader.cpp
+)
+
+ADD_LIBRARY(NITFReader SHARED ${library_sources})
+ADD_EXECUTABLE(VT_NITFReader ${reader_sources})
+
+SET(libs NITFReader nitf-c nrt-c)
+
+TARGET_LINK_LIBRARIES(VT_NITFReader ${libs})
+
+INSTALL(TARGETS NITFReader DESTINATION lib)
+INSTALL(TARGETS VT_NITFReader DESTINATION bin)
+INSTALL(FILES runNITFReader.sh DESTINATION run)
+
+SET_TARGET_PROPERTIES(NITFReader PROPERTIES LINKER_LANGUAGE CXX)
+SET_TARGET_PROPERTIES(VT_NITFReader PROPERTIES LINKER_LANGUAGE CXX)

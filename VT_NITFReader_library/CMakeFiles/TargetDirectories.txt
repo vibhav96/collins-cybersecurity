@@ -1,0 +1,2 @@
+/vagrant/VT_NITFReader_library/CMakeFiles/NITFReader.dir
+/vagrant/VT_NITFReader_library/CMakeFiles/VT_NITFReader.dir
